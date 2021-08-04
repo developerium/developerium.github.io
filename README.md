@@ -1,1 +1,1 @@
-# Hola Amogos :)
+Simple static page
