@@ -16,8 +16,9 @@ const Root = styled.div`
 
 export const SocialLinks: FC = () => (
   <Root>
+    <Link title="email" url="mailto:kheradmand.v1@gmail.com" />
     <Link title="linkedin" url="https://www.linkedin.com/in/developerium/" />
     <Link title="github" url="https://github.com/developerium/" />
-    <Link title="email" url="mailto:kheradmand.v1@gmail.com" />
+    <Link title="instagram" url="https://www.instagram.com/developerium/" />
   </Root>
 );
