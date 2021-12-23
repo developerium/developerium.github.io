@@ -1,20 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Header } from './Header';
+import { SocialLinks } from './SocialLinks';
 
 const Root = styled.div`
-  background-color: gray;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 32px;
-  width: 800px;
+
+  width: 900px;
+  padding: 16px;
   margin: auto;
+
+  border-radius: 8px;
+  background-color: #ede7f6;
 `;
 
 function App() {
   return (
     <Root>
       <Header />
+      <SocialLinks />
     </Root>
   );
 }
