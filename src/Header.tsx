@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import myImage from './assets/me-01.jpg';
+import { SocialLinks } from './SocialLinks';
 import { bodyColor, maxWidth, textColor } from './theme';
 
 const Root = styled.div`
@@ -11,6 +12,7 @@ const Root = styled.div`
 
   @media (max-width: ${maxWidth}px) {
     flex-direction: column-reverse;
+    height: 85%;
   }
 `;
 
@@ -28,7 +30,6 @@ const Title = styled.div`
 
 const Subtitle = styled.div`
   color: ${textColor};
-  padding-top: 8px;
   font-size: 28px;
 `;
 
@@ -49,6 +50,7 @@ export const Header: FC = () => (
     <ColumnWrapper>
       <Title>Vahid Kheradmand</Title>
       <Subtitle>Software Engineer in Munich</Subtitle>
+      <SocialLinks />
     </ColumnWrapper>
 
     <ColumnWrapper>

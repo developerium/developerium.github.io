@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { AppStyle } from './AppStyle';
 import { Header } from './Header';
-import { SocialLinks } from './SocialLinks';
 import { appColor, maxWidth } from './theme';
 
 const Root = styled.div`
@@ -19,8 +18,6 @@ const Root = styled.div`
   background-color: ${appColor};
 
   @media (max-width: ${maxWidth}px) {
-    justify-content: space-evenly;
-
     width: 85%;
     height: 85%;
   }
@@ -31,7 +28,6 @@ function App() {
     <Root>
       <AppStyle />
       <Header />
-      <SocialLinks />
     </Root>
   );
 }
