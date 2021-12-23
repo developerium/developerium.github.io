@@ -5,6 +5,7 @@ import { bodyColor } from './theme';
 export const AppStyle = createGlobalStyle`
   body {
     background-color: ${bodyColor};
+    user-select: none;
   }
 
   #root {
