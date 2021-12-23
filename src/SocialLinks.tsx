@@ -1,8 +1,18 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from './Link';
+import { maxWidth } from './theme';
 
-const Root = styled.div``;
+const Root = styled.div`
+  padding-top: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (max-width: ${maxWidth}px) {
+    justify-content: center;
+  }
+`;
 
 export const SocialLinks: FC = () => (
   <Root>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { AppStyle } from './AppStyle';
 import { Header } from './Header';
 import { SocialLinks } from './SocialLinks';
-import { appColor } from './theme';
+import { appColor, maxWidth } from './theme';
 
 const Root = styled.div`
   display: flex;
@@ -11,11 +11,19 @@ const Root = styled.div`
   justify-content: center;
 
   width: 900px;
+
   padding: 16px;
   margin: auto;
 
   border-radius: 8px;
   background-color: ${appColor};
+
+  @media (max-width: ${maxWidth}px) {
+    justify-content: space-evenly;
+
+    width: 85%;
+    height: 85%;
+  }
 `;
 
 function App() {
