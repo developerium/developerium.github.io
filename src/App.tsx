@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { AppStyle } from './AppStyle';
 import { Header } from './Header';
 import { SocialLinks } from './SocialLinks';
+import { appColor } from './theme';
 
 const Root = styled.div`
   display: flex;
@@ -13,12 +15,13 @@ const Root = styled.div`
   margin: auto;
 
   border-radius: 8px;
-  background-color: #ede7f6;
+  background-color: ${appColor};
 `;
 
 function App() {
   return (
     <Root>
+      <AppStyle />
       <Header />
       <SocialLinks />
     </Root>

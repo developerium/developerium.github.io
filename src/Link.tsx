@@ -1,18 +1,15 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { linkColor, linkHoverColor } from './theme';
 
 interface LinkProps {
   title: string;
   url: string;
 }
 
-// deep purple
-// https://htmlcolorcodes.com/color-chart/material-design-color-chart/
-const linkColor = '#311B92';
-const linkHoverColor = '#6200EA';
-
 const StyledA = styled.a`
   padding-right: 16px;
+  font-size: 24px;
 
   color: ${linkColor};
   &:active,
