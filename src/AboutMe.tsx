@@ -7,12 +7,12 @@ const Root = styled.div``;
 const Paragraph = styled.p`
   font-size: 24px;
   color: ${textColor};
-  line-height: 40px;
+  margin-top: 24px;
 `;
 
 export const AboutMe = () => (
   <Root>
-    <Paragraph>Fancy meeting you here 👋</Paragraph>
+    <Paragraph>👋 Fancy meeting you here</Paragraph>
     <Paragraph>
       I&apos;m a happy/quite/dad engineer living in beautiful Munich, Germany
     </Paragraph>
