@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import myImage from './assets/me-01.jpg';
 import { SocialLinks } from './SocialLinks';
-import { bodyColor, maxWidth, textColor } from './theme';
+import { bodyColor, maxMobileWidth, textColor } from './theme';
 
 const Root = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: ${maxWidth}px) {
+  @media (max-width: ${maxMobileWidth}px) {
     flex-direction: column-reverse;
     height: 85%;
   }
@@ -40,7 +40,7 @@ const Image = styled.img`
   border: 5px solid ${bodyColor};
   margin: auto;
 
-  @media (max-width: ${maxWidth}px) {
+  @media (max-width: ${maxMobileWidth}px) {
     width: 250px;
   }
 `;

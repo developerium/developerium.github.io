@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { AboutMe } from './AboutMe';
 import { AppStyle } from './AppStyle';
 import { Header } from './Header';
-import { appColor, maxWidth } from './theme';
+import { appColor, maxMobileWidth, maxTabletWidth } from './theme';
 
 const Root = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  width: 900px;
 
   padding: 16px;
   margin: auto;
@@ -17,9 +15,14 @@ const Root = styled.div`
   border-radius: 8px;
   background-color: ${appColor};
 
-  @media (max-width: ${maxWidth}px) {
-    width: 85%;
-    height: 85%;
+  width: 900px;
+
+  @media (max-width: ${maxMobileWidth}px) {
+    width: 100%;
+  }
+
+  @media (max-width: ${maxTabletWidth}px) {
+    width: 700px;
   }
 `;
 
@@ -28,6 +31,7 @@ function App() {
     <Root>
       <AppStyle />
       <Header />
+      <AboutMe />
     </Root>
   );
 }

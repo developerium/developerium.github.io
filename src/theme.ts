@@ -6,4 +6,5 @@ export const textColor = '#719FB0';
 export const linkColor = '#F05454';
 export const linkHoverColor = bodyColor;
 
-export const maxWidth = 500;
+export const maxMobileWidth = 500;
+export const maxTabletWidth = 800;

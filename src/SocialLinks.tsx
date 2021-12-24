@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from './Link';
-import { maxWidth } from './theme';
+import { maxMobileWidth } from './theme';
 
 const Root = styled.div`
   padding-top: 32px;
@@ -9,7 +9,7 @@ const Root = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 
-  @media (max-width: ${maxWidth}px) {
+  @media (max-width: ${maxMobileWidth}px) {
     justify-content: center;
   }
 `;
