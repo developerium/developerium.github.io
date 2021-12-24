@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { AboutMe } from './AboutMe';
 import { AppStyle } from './AppStyle';
+import { AppVersion } from './AppVersion';
 import { Header } from './Header';
 import { appColor, maxMobileWidth, maxTabletWidth } from './theme';
 
@@ -32,6 +33,7 @@ function App() {
       <AppStyle />
       <Header />
       <AboutMe />
+      <AppVersion />
     </Root>
   );
 }
