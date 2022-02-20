@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AboutMe } from './AboutMe';
 import { AppStyle } from './AppStyle';
 import { AppVersion } from './AppVersion';
-import { Header } from './Header';
+import { DiceWrapper } from './DiceWrapper';
 import { appColor, maxMobileWidth, maxTabletWidth } from './theme';
 
 const Root = styled.div`
@@ -31,8 +30,7 @@ function App() {
   return (
     <Root>
       <AppStyle />
-      <Header />
-      <AboutMe />
+      <DiceWrapper />
       <AppVersion />
     </Root>
   );
