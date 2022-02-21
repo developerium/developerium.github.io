@@ -15,15 +15,8 @@ const Root = styled.div`
   border-radius: 8px;
   background-color: ${appColor};
 
-  width: 900px;
-
-  @media (max-width: ${maxMobileWidth}px) {
-    width: 100%;
-  }
-
-  @media (max-width: ${maxTabletWidth}px) {
-    width: 700px;
-  }
+  width: 90vw;
+  height: 90vh;
 `;
 
 function App() {
