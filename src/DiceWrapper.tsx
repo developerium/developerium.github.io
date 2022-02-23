@@ -1,7 +1,15 @@
-import React, { useRef, useState } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { Canvas, useFrame, useThree, extend } from '@react-three/fiber';
+import {
+  Canvas,
+  useFrame,
+  useThree,
+  useLoader,
+  extend,
+} from '@react-three/fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { TextureLoader } from 'three';
+import woodTexture from './assets/bright-wood-texture.jpg';
 
 extend({ OrbitControls });
 
@@ -32,8 +40,8 @@ const LightBulb = () => {
 
 function Box(props: JSX.IntrinsicElements['mesh']) {
   const ref = useRef<THREE.Mesh>(null);
-  const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
+
+  const texture = useLoader(TextureLoader, woodTexture);
 
   useFrame((state, delta) => {
     if (!ref.current) return;
@@ -43,18 +51,9 @@ function Box(props: JSX.IntrinsicElements['mesh']) {
   });
 
   return (
-    <mesh
-      {...props}
-      ref={ref}
-      scale={clicked ? 1.5 : 1}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}
-      castShadow
-      receiveShadow
-    >
+    <mesh {...props} ref={ref} castShadow receiveShadow>
       <boxBufferGeometry args={[2, 2, 2]} />
-      <meshPhysicalMaterial color={hovered ? 'hotpink' : 'orange'} />
+      <meshPhysicalMaterial map={texture} />
     </mesh>
   );
 }
@@ -62,7 +61,7 @@ function Box(props: JSX.IntrinsicElements['mesh']) {
 export const DiceWrapper = () => {
   return (
     <Canvas
-      camera={{ position: [3, 5, 20], fov: 60 }}
+      camera={{ position: [3, 5, 20] }}
       style={{ backgroundColor: 'black' }}
       shadows
     >
@@ -71,8 +70,13 @@ export const DiceWrapper = () => {
       <ambientLight intensity={0.2} />
       <LightBulb />
 
-      <Box position={[-5, 2, 0]} />
-      <Box position={[1.2, 4, 0]} />
+      <Suspense fallback={null}>
+        <Box position={[-5, 2, 0]} />
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <Box position={[1.2, 4, 0]} />
+      </Suspense>
 
       <mesh position={[5, 2, 4]} castShadow>
         <sphereBufferGeometry args={[0.5]} />
