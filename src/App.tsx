@@ -1,10 +1,9 @@
 import React from 'react'
 
+import { ThemeProvider } from '@mui/material'
 import { InfoCard } from './components/InfoCard'
 import myImage from './assets/me-01.jpg'
-
 import { Layout } from './components/Layout'
-import { ThemeProvider } from '@mui/material'
 import { appTheme } from './config/theme-config'
 import { SocialLinks } from './components/SocialLinks'
 
@@ -13,10 +12,8 @@ function App() {
     <ThemeProvider theme={appTheme}>
       <Layout>
         <InfoCard
-          title={'Vahid Kheradmand'}
-          description={
-            "I'm a happy/quite/dad engineer living in beautiful Munich Germany."
-          }
+          title="Vahid Kheradmand"
+          description="Seasoned cloud software engineer on the entrepreneurial path, enjoying life in Munich."
           image={myImage}
         />
 

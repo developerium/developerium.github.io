@@ -12,7 +12,7 @@ const linkStyle: LinkProps['sx'] = {
   fontSize: 20,
 }
 
-export const CustomLink: FC<LinkProps> = ({ children, ...props }) => (
+export const StyledLink: FC<LinkProps> = ({ children, ...props }) => (
   <Link {...props} sx={linkStyle} underline="hover" target="_blank">
     {children}
   </Link>
