@@ -6,7 +6,14 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({ children }) => (
-  <Grid container alignContent="center" flexDirection="column" paddingY={2}>
-    <Grid item>{children} </Grid>
+  <Grid
+    container
+    flexDirection="column"
+    alignItems="center"
+    justifyContent="center"
+    paddingY={2}
+    minHeight="100vh"
+  >
+    <Grid item>{children}</Grid>
   </Grid>
 )
