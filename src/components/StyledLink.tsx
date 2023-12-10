@@ -3,12 +3,14 @@ import Link, { LinkProps } from '@mui/material/Link'
 import { greenColor, pinkColor, purpleColor } from '../config/theme-config'
 
 const linkStyle: LinkProps['sx'] = {
+  display: 'flex',
+  alignItems: 'center',
   color: greenColor,
   ':hover': {
     backgroundColor: purpleColor,
     color: pinkColor,
   },
-  padding: 2,
+  paddingY: 2,
   fontSize: 20,
 }
 
