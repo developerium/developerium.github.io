@@ -27,9 +27,10 @@ export const InfoCard: FC<InfoCardProps> = ({ title, description, image }) => (
       <CardContent>
         <Typography
           gutterBottom
-          variant="h5"
+          variant="h1"
           component="div"
           color={whiteColor}
+          fontSize="50px"
         >
           {title}
         </Typography>
