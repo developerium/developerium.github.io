@@ -6,6 +6,7 @@ import myImage from './assets/me-01.jpg'
 import { Layout } from './components/Layout'
 import { ThemeProvider } from '@mui/material'
 import { appTheme } from './config/theme-config'
+import { SocialLinks } from './components/SocialLinks'
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           }
           image={myImage}
         />
+
+        <SocialLinks />
       </Layout>
     </ThemeProvider>
   )

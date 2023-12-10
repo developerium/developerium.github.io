@@ -10,3 +10,5 @@ export const appTheme = createTheme({
 // NOTE : app's black background is set in index.html file for better ux (not flickering)
 export const purpleColor = '#7636ff'
 export const whiteColor = '#fff'
+export const greenColor = '#22e88f'
+export const pinkColor = '#f5f'
