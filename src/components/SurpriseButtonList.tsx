@@ -2,22 +2,20 @@ import React, { FC } from 'react'
 import Box, { BoxProps } from '@mui/material/Box'
 import List from '@mui/material/List'
 import CelebrationIcon from '@mui/icons-material/Celebration'
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset'
 
-import { pinkColor } from '../config/theme-config'
+import { greenColor, pinkColor, purpleColor } from '../config/theme-config'
 import { SurpriseButton } from './SurpriseButton'
 import { useConfetti } from '../useConfetti'
+import { SurpriseLink } from './SurpriseLink'
+import { LinkProps } from '@mui/material/Link'
 
 const rootStyle: BoxProps['sx'] = { backgroundColor: pinkColor }
+const iconStyle = { marginRight: 2 }
 
 export const SurpriseButtonList: FC = () => {
   const confettiButtonId = 'confetti-button'
   const { throwConfetti } = useConfetti({ targetId: confettiButtonId })
-
-  const handler = () => {
-    console.log('yooo')
-  }
 
   return (
     <Box sx={rootStyle}>
@@ -25,20 +23,15 @@ export const SurpriseButtonList: FC = () => {
         <List>
           <SurpriseButton
             id={confettiButtonId}
-            title="Confetti"
+            title="confetti"
             onClick={throwConfetti}
             icon={<CelebrationIcon />}
           />
-          <SurpriseButton
-            title="Launch it!"
-            onClick={handler}
-            icon={<RocketLaunchIcon />}
-          />
-          <SurpriseButton
-            title="Tic Tac Toe"
-            onClick={handler}
-            icon={<VideogameAssetIcon />}
-          />
+
+          <SurpriseLink href="https://super-tic-tac-toe.developerium.com">
+            <VideogameAssetIcon sx={iconStyle} />
+            super tic tac toe
+          </SurpriseLink>
         </List>
       </nav>
     </Box>
