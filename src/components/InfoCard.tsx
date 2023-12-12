@@ -1,44 +1,63 @@
-import React, { FC } from 'react'
+import React, { FC, useMemo } from 'react'
 import Card, { CardProps } from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import CardActionArea from '@mui/material/CardActionArea'
-import { purpleColor, whiteColor } from '../config/theme-config'
+import { whiteColor } from '../config/theme-config'
 
 interface InfoCardProps {
   title: string
   description: string
-  image: string
+  bgColor: string
+  image?: string
+  containsHeader?: boolean
 }
 
-const rootStyle: CardProps['sx'] = {
+const baseCardStyle: CardProps['sx'] = {
   maxWidth: 345,
-  backgroundColor: purpleColor,
   border: 0,
   borderRadius: 0,
 }
 
-export const InfoCard: FC<InfoCardProps> = ({ title, description, image }) => (
-  <Card sx={rootStyle}>
-    <CardActionArea>
-      <CardMedia component="img" height="400" image={image} alt={title} />
+export const InfoCard: FC<InfoCardProps> = ({
+  title,
+  description,
+  image,
+  bgColor,
+  containsHeader = false,
+}) => {
+  const cardStyle = useMemo(
+    () => ({
+      ...baseCardStyle,
+      backgroundColor: bgColor,
+    }),
+    [bgColor]
+  )
 
-      <CardContent>
-        <Typography
-          gutterBottom
-          variant="h1"
-          component="div"
-          color={whiteColor}
-          fontSize="50px"
-        >
-          {title}
-        </Typography>
+  return (
+    <Card sx={cardStyle}>
+      <CardActionArea>
+        {image && (
+          <CardMedia component="img" height="400" image={image} alt={title} />
+        )}
 
-        <Typography variant="body2" color={whiteColor}>
-          {description}
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-  </Card>
-)
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant={containsHeader ? 'h1' : 'h2'}
+            component="div"
+            color={whiteColor}
+            fontSize="50px"
+          >
+            {title}
+          </Typography>
+
+          <Typography variant="body2" color={whiteColor}>
+            {description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  )
+}
