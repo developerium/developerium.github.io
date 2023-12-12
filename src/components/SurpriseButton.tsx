@@ -8,6 +8,7 @@ import { baseFontSize, purpleColor, whiteColor } from '../config/theme-config'
 
 interface SurpriseButtonProps {
   title: string
+  id?: string
   onClick: ListItemProps['onClick']
   icon: ReactElement
 }
@@ -27,9 +28,10 @@ export const SurpriseButton: FC<SurpriseButtonProps> = ({
   title,
   onClick,
   icon,
+  id,
 }) => {
   return (
-    <ListItem disablePadding sx={listStyle} onClick={onClick}>
+    <ListItem disablePadding sx={listStyle} onClick={onClick} id={id}>
       <ListItemButton>
         <ListItemIcon sx={iconStyle}>{icon}</ListItemIcon>
         <ListItemText primary={title} primaryTypographyProps={textStyle} />

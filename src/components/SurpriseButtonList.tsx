@@ -7,10 +7,14 @@ import VideogameAssetIcon from '@mui/icons-material/VideogameAsset'
 
 import { pinkColor } from '../config/theme-config'
 import { SurpriseButton } from './SurpriseButton'
+import { useConfetti } from '../useConfetti'
 
 const rootStyle: BoxProps['sx'] = { backgroundColor: pinkColor }
 
 export const SurpriseButtonList: FC = () => {
+  const confettiButtonId = 'confetti-button'
+  const { throwConfetti } = useConfetti({ targetId: confettiButtonId })
+
   const handler = () => {
     console.log('yooo')
   }
@@ -20,8 +24,9 @@ export const SurpriseButtonList: FC = () => {
       <nav aria-label="list of surprising buttons">
         <List>
           <SurpriseButton
+            id={confettiButtonId}
             title="Confetti"
-            onClick={handler}
+            onClick={throwConfetti}
             icon={<CelebrationIcon />}
           />
           <SurpriseButton
