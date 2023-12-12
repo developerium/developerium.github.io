@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import Box, { BoxProps } from '@mui/material/Box'
 import List from '@mui/material/List'
-import InboxIcon from '@mui/icons-material/Inbox'
+import CelebrationIcon from '@mui/icons-material/Celebration'
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset'
 
 import { pinkColor } from '../config/theme-config'
 import { SurpriseButton } from './SurpriseButton'
@@ -18,19 +20,19 @@ export const SurpriseButtonList: FC = () => {
       <nav aria-label="list of surprising buttons">
         <List>
           <SurpriseButton
-            title={'First'}
+            title="Confetti"
             onClick={handler}
-            icon={<InboxIcon />}
+            icon={<CelebrationIcon />}
           />
           <SurpriseButton
-            title={'Second'}
+            title="Launch it!"
             onClick={handler}
-            icon={<InboxIcon />}
+            icon={<RocketLaunchIcon />}
           />
           <SurpriseButton
-            title={'Third'}
+            title="Tic Tac Toe"
             onClick={handler}
-            icon={<InboxIcon />}
+            icon={<VideogameAssetIcon />}
           />
         </List>
       </nav>
