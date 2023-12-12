@@ -5,7 +5,8 @@ import { InfoCard } from './components/InfoCard'
 import myImage from './assets/me-01.jpg'
 import { Layout } from './components/Layout'
 import { appTheme, pinkColor, purpleColor } from './config/theme-config'
-import { SocialLinks } from './components/SocialLinks'
+import { SocialLinkList } from './components/SocialLinkList'
+import { SurpriseButtonList } from './components/SurpriseButtonList'
 
 function App() {
   return (
@@ -19,14 +20,15 @@ function App() {
           bgColor={purpleColor}
         />
 
-        <SocialLinks />
+        <SocialLinkList />
 
         <InfoCard
-          containsHeader
           title="Shall we have some fun"
           description="Click on the buttons below for a small surprise!"
           bgColor={pinkColor}
         />
+
+        <SurpriseButtonList />
       </Layout>
     </ThemeProvider>
   )

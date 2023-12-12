@@ -6,13 +6,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 import { StyledLink } from './StyledLink'
 
-interface SocialLinksProps {
-  a?: string
-}
-
 const iconStyle = { marginRight: 2 }
 
-export const SocialLinks: FC<SocialLinksProps> = () => (
+export const SocialLinkList: FC = () => (
   <Grid container flexDirection="column">
     <StyledLink href="mailto:vahid@kheradmand.de" title="Email Vahid">
       <EmailIcon sx={iconStyle} />

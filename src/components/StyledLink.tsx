@@ -10,7 +10,7 @@ const linkStyle: LinkProps['sx'] = {
     backgroundColor: purpleColor,
     color: pinkColor,
   },
-  paddingY: 2,
+  padding: 2,
   fontSize: 20,
 }
 
