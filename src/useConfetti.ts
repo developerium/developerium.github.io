@@ -16,14 +16,14 @@ export const useConfetti = ({ targetId }: UseConfettiProps) => {
     }
 
     if (variant) {
-      party.confetti(source, {
-        count: party.variation.range(0, 100),
-        size: party.variation.range(0.6, 1.4),
-      })
-    } else {
       party.sparkles(source, {
         count: party.variation.range(10, 60),
         speed: party.variation.range(50, 300),
+      })
+    } else {
+      party.confetti(source, {
+        count: party.variation.range(0, 100),
+        size: party.variation.range(0.6, 1.4),
       })
     }
 
