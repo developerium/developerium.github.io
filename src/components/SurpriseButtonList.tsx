@@ -4,11 +4,10 @@ import List from '@mui/material/List'
 import CelebrationIcon from '@mui/icons-material/Celebration'
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset'
 
-import { greenColor, pinkColor, purpleColor } from '../config/theme-config'
+import { pinkColor } from '../config/theme-config'
 import { SurpriseButton } from './SurpriseButton'
 import { useConfetti } from '../useConfetti'
 import { SurpriseLink } from './SurpriseLink'
-import { LinkProps } from '@mui/material/Link'
 
 const rootStyle: BoxProps['sx'] = { backgroundColor: pinkColor }
 const iconStyle = { marginRight: 2 }
