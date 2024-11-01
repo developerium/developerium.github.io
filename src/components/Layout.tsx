@@ -11,7 +11,8 @@ export const Layout: FC<LayoutProps> = ({ children }) => (
     flexDirection="column"
     alignItems="center"
     justifyContent="center"
-    paddingY={2}
+    paddingTop={2}
+    paddingBottom={20}
     minHeight="100vh"
   >
     <Grid item>{children}</Grid>
