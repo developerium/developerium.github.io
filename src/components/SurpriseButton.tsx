@@ -4,7 +4,7 @@ import ListItemIcon, { ListItemIconProps } from '@mui/material/ListItemIcon'
 import ListItemText, { ListItemTextProps } from '@mui/material/ListItemText'
 import ListItem, { ListItemProps } from '@mui/material/ListItem'
 
-import { baseFontSize, purpleColor, whiteColor } from '../config/theme-config'
+import { baseFontSize, greenColor, pinkColor } from '../config/theme-config'
 
 interface SurpriseButtonProps {
   title: string
@@ -14,12 +14,12 @@ interface SurpriseButtonProps {
 }
 
 const listStyle: ListItemProps['sx'] = {
-  color: whiteColor,
+  color: greenColor,
   ':hover': {
-    backgroundColor: purpleColor,
+    backgroundColor: pinkColor,
   },
 }
-const iconStyle: ListItemIconProps['sx'] = { color: whiteColor }
+const iconStyle: ListItemIconProps['sx'] = { color: greenColor }
 const textStyle: ListItemTextProps['primaryTypographyProps'] = {
   fontSize: baseFontSize,
 }

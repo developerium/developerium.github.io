@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
 
 import Link, { LinkProps } from '@mui/material/Link'
-import { purpleColor, whiteColor } from '../config/theme-config'
+import { greenColor, pinkColor } from '../config/theme-config'
 
 const linkStyle: LinkProps['sx'] = {
   display: 'flex',
   alignItems: 'center',
-  color: whiteColor,
+  color: greenColor,
   ':hover': {
-    backgroundColor: purpleColor,
+    backgroundColor: pinkColor,
   },
   padding: 2,
   fontSize: 20,
