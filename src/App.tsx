@@ -7,7 +7,6 @@ import { Layout } from './components/Layout'
 import { appTheme, pinkColor, purpleColor } from './config/theme-config'
 import { SocialLinkList } from './components/SocialLinkList'
 import { SurpriseButtonList } from './components/SurpriseButtonList'
-import { CommunityLinkList } from './components/CommunityLinkList'
 
 function App() {
   return (
