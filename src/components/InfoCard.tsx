@@ -48,7 +48,7 @@ export const InfoCard: FC<InfoCardProps> = ({
             variant={containsHeader ? 'h1' : 'h2'}
             component="div"
             color={whiteColor}
-            fontSize="50px"
+            sx={{ fontSize: '50px' }}
           >
             {title}
           </Typography>

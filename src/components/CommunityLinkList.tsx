@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid'
 const iconStyle = { marginRight: 2 }
 
 export const CommunityLinkList: FC = () => (
-  <Grid container flexDirection="column">
+  <Grid container sx={{ flexDirection: 'column' }}>
     <StyledLink
       href="https://www.skool.com/it-engineers-road-to-germany-6893"
       title="Community"

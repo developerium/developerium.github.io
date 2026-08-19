@@ -28,7 +28,7 @@ export const useConfetti = ({ targetId }: UseConfettiProps) => {
     }
 
     setVariant(!variant)
-  }, [variant, setVariant])
+  }, [targetId, variant])
 
   return {
     throwConfetti,

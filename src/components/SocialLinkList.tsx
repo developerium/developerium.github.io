@@ -9,7 +9,7 @@ import { StyledLink } from './StyledLink'
 const iconStyle = { marginRight: 2 }
 
 export const SocialLinkList: FC = () => (
-  <Grid container flexDirection="column">
+  <Grid container sx={{ flexDirection: 'column' }}>
     <StyledLink href="mailto:vahid@kheradmand.de" title="Email Vahid">
       <EmailIcon sx={iconStyle} />
       email

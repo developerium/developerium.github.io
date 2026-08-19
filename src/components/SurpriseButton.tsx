@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon, { ListItemIconProps } from '@mui/material/ListItemIcon'
-import ListItemText, { ListItemTextProps } from '@mui/material/ListItemText'
+import ListItemText from '@mui/material/ListItemText'
 import ListItem, { ListItemProps } from '@mui/material/ListItem'
 
 import { baseFontSize, greenColor, pinkColor } from '../config/theme-config'
@@ -20,9 +20,7 @@ const listStyle: ListItemProps['sx'] = {
   },
 }
 const iconStyle: ListItemIconProps['sx'] = { color: greenColor }
-const textStyle: ListItemTextProps['primaryTypographyProps'] = {
-  fontSize: baseFontSize,
-}
+const textStyle = { sx: { fontSize: baseFontSize } }
 
 export const SurpriseButton: FC<SurpriseButtonProps> = ({
   title,
@@ -34,7 +32,7 @@ export const SurpriseButton: FC<SurpriseButtonProps> = ({
     <ListItem disablePadding sx={listStyle} onClick={onClick} id={id}>
       <ListItemButton>
         <ListItemIcon sx={iconStyle}>{icon}</ListItemIcon>
-        <ListItemText primary={title} primaryTypographyProps={textStyle} />
+        <ListItemText primary={title} slotProps={{ primary: textStyle }} />
       </ListItemButton>
     </ListItem>
   )
