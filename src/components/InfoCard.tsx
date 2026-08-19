@@ -15,7 +15,7 @@ interface InfoCardProps {
 }
 
 const baseCardStyle: CardProps['sx'] = {
-  maxWidth: 345,
+  maxWidth: { xs: 345, lg: 500 },
   border: 0,
   borderRadius: 0,
 }
