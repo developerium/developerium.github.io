@@ -12,8 +12,6 @@ export const Layout: FC<LayoutProps> = ({ children }) => (
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      paddingTop: 2,
-      paddingBottom: 20,
       minHeight: '100vh',
     }}
   >
