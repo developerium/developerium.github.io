@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Grid from '@mui/material/Grid'
 import EmailIcon from '@mui/icons-material/Email'
-import GitHubIcon from '@mui/icons-material/GitHub'
+// import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 import { StyledLink } from './StyledLink'
@@ -23,12 +23,12 @@ export const SocialLinkList: FC = () => (
       linkedin
     </StyledLink>
 
-    <StyledLink
-      href="https://github.com/developerium/"
-      title="Vahid's Github profile link"
-    >
-      <GitHubIcon sx={iconStyle} />
-      github
-    </StyledLink>
+    {/*<StyledLink*/}
+    {/*  href="https://github.com/developerium/"*/}
+    {/*  title="Vahid's Github profile link"*/}
+    {/*>*/}
+    {/*  <GitHubIcon sx={iconStyle} />*/}
+    {/*  github*/}
+    {/*</StyledLink>*/}
   </Grid>
 )

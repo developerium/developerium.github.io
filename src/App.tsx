@@ -22,13 +22,13 @@ function App() {
 
         <SocialLinkList />
 
-        <InfoCard
-          title="Shall we have some fun"
-          description="Click on the buttons below for a small surprise!"
-          bgColor={pinkColor}
-        />
+        {/*<InfoCard*/}
+        {/*  title="Shall we have some fun"*/}
+        {/*  description="Click on the buttons below for a small surprise!"*/}
+        {/*  bgColor={pinkColor}*/}
+        {/*/>*/}
 
-        <SurpriseButtonList />
+        {/*<SurpriseButtonList />*/}
 
         {/*<InfoCard*/}
         {/*  title="IT Engineers' Road to Germany"*/}
