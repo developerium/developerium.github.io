@@ -10,6 +10,7 @@
 
 # production
 /build
+/docs/.vite
 
 # misc
 .DS_Store
